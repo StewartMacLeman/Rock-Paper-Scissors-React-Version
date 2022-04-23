@@ -1,11 +1,11 @@
 import React from "react";
 
-const StartResetButtons = () => {
+const StartResetButtons = (props) => {
   return (
-    <div className="startAndResetContainer">
+    <div className={!props.showStartReset ? "hide" : "startAndResetContainer"}>
       <div className="startAndResetButtons">
-        <button type="button">Start</button>
-        <button type="button">Reset</button>
+        <button type="button" onClick={props.startToPlay}>Start</button>
+        <button type="button" onClick={props.reset}>Reset</button>
       </div>
     </div>
   );
