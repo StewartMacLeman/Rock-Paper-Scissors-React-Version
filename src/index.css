@@ -142,7 +142,7 @@ h1, h2, p, button, li {
   100% { transform: rotate(360deg); }
 }
 /* Player buttons sections ------------------------------ */
-.playButtonsContainer {
+.playerButtonsContainer {
   width: 100%;
   margin-top: 1rem;
   padding-top: 1rem;
@@ -153,17 +153,19 @@ h1, h2, p, button, li {
   align-items: center;
 }
 .bestOutOfContainer, .startAndResetContainer {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .bestOutOfButtons, .startAndResetButtons {
+  width: 90%;
+  padding: .15rem;
   display: flex;
-  width: 50%;
+  justify-content: space-evenly;
 }
 .bestOutOfButtons button, .startAndResetButtons button {
-  min-width: 110px;
+  min-width: 45%;
 }
 
 /* The hide class; used for hiding elements. -----------*/

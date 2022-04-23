@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Messages from "./Messages";
 import ImagesCont from "./ImagesCont";
+import ButtonsCont from "./ButtonsCont";
 
 const GameArea = () => {
   const [message, setMessage] = useState("A message!");
@@ -23,6 +24,7 @@ const GameArea = () => {
         compNumerator={computersScore}
         dominator={`/${numberOfGames}`}
       />
+      <ButtonsCont />
     </>
   );
 };
