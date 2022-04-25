@@ -8,31 +8,37 @@ html {
 :root {
   --grey: rgba(128, 128, 128, 0.2);
 }
-
 body {
+  width: 75%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+#root {
+  flex: 1;
+  width: 100%;
+}
 
-h1 { font-size: 4rem; }
+h1 { font-size: 2.25rem; }
 h2 { font-size: 1.75rem; }
-p { font-size: 2rem; }
-button { font-size: 1.5rem; }
-li { font-size: 1.5rem; }
+h3 { font-size: 1.5rem; }
+p { font-size: 1.5rem; }
+button { font-size: 1.35rem; }
+li { font-size: 1.15rem; }
 
-h1, h2, p, button, li {
+h1, h2, h3, p, button, li {
   font-family: futura, helvetica, sans-serif;
   text-align: center;
   margin: 0 auto;
-  padding: .25rem;
+  padding: .15rem .25rem;
   background-color: none;
 }
 /* Button styles. ----------------------------------- */
  button {
    background-color: dodgerblue;
-   border-radius: 10px;
-   box-shadow: 1px 4px;
+   border-radius: .625rem;
+   box-shadow: .0625rem .15rem;
  }
  button:hover {
    background-color: blue;
@@ -42,7 +48,7 @@ h1, h2, p, button, li {
 /* Header section styles.---------------------------- */
 .header {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: .3rem;
   background-color: var(--grey);
   border-bottom: .25rem solid black;
   display: flex;
@@ -54,7 +60,7 @@ h1, h2, p, button, li {
 }
 .titleStyle {
   color: red;
-  text-shadow: 2px 0px black, 0px 2px black, -1px 0px black, 0px -1px black;
+  text-shadow: .07rem 0rem black, 0rem .07rem black, -.07rem 0rem black, 0rem -.07rem black;
 }
 .rulesContainer {
   width: 90%;
@@ -77,7 +83,7 @@ h1, h2, p, button, li {
   margin-bottom: .15rem;
 }
 .scoresContainer p {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
 }
 .scoresPair {
   display: flex;
@@ -89,51 +95,47 @@ h1, h2, p, button, li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 93px;
+  min-width: 5.82rem;
 }
 .scoresImageDiv {
-  width: 50px;
-  height: 40px;
+  width: 3.125rem;
+  height: 2.5rem;
 }
 /* Game area styles.---------------------------------- */
 .messagePara {
-  margin-bottom: .5rem;
+  width: 90%;
 }
 .gameArea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* align-content: space-between; */
   width: 100%;
-  border: .25rem solid red;
 }
 .sideContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 48%;
-  border: .25rem solid blue;
 }
 .divider {
-  height: 200px;
-  width: .75%;
+  height: 12.5rem;
+  width: .25rem;
   background-color: black;
-  /* border-right: .25rem solid black; */
 }
-.sideContainer h2 {
+.sideContainer h3 {
   text-decoration: underline;
 }
 .imageContainer {
-  width: 300px;
-  height: 200px;
+  width: 18.75rem;
+  height: 12.5rem;
 }
 /* Spinner div image ------------------------------------ */
 .spinner {
-  width: 200px;
-  height: 200px;
-  border: 1rem solid var(--grey);
-  border-top: 1rem solid red;
-  border-bottom: 1rem solid red;
+  width: 12.5rem;
+  height: 12.5rem;
+  border: .75rem solid var(--grey);
+  border-top: .75rem solid red;
+  border-bottom: .75rem solid red;
   border-radius: 50%;
   animation: spin 2s linear infinite;
 }
@@ -144,8 +146,8 @@ h1, h2, p, button, li {
 /* Player buttons sections ------------------------------ */
 .playerButtonsContainer {
   width: 100%;
-  margin-top: 1rem;
-  padding-top: 1rem;
+  margin-top: .5rem;
+  padding-top: .5rem;
   color: red;
   border-top: .25rem solid black;
   display: flex;
@@ -168,7 +170,7 @@ h1, h2, p, button, li {
   min-width: 45%;
 }
 
-/* The hide class; used for hiding elements. -----------*/
+/* The hide class -------------------------------------*/
 .hide {
   display: none;
 }
@@ -194,81 +196,50 @@ h1, h2, p, button, li {
   html { font-size: 12px; }
 }
 @media screen and (max-width: 650px){
-  html { font-size: 8px; }
+  body { width: 85%; }
+  .gameArea { 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+   }
+   .messagePara {margin-top: 1rem; }
 }
-/* Rules images and general buttons query. -------------- */
-@media screen and (max-width: 650px){
-  .scoresItem {
-    min-width: 24px;
-  }
-  .scoresImageDiv {
-    width: 20px;
-    height: 15px;
-  }
-  button {
-    border-radius: 4px;
-    box-shadow: .65px 2px;
-  }
+@media screen and (max-width: 550px){
+  html { font-size: 10px; }
 }
-/* Game area media queries.--------------------------------- */
-@media screen and (max-width: 920px){
-  .imageContainer {
-    width: 250px;
-    height: 150px;
-  }
-  .spinner {
-    width: 150px;
-    height: 150px;
-  }
-  h2 { font-size: 1.5rem; }
-}
-/* @media screen and (max-width: 650px){
+@media screen and (max-width: 450px){
   .gameArea {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 60%;
-  }
-  .sideContainerOne, .sideContainerTwo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%
-  }
-  .sideContainerOne{
-    border-right: none;
-    border-bottom: .25rem solid black;
+    padding-top: .5rem;
     padding-bottom: .5rem;
+    margin-bottom: .5rem;
   }
-} */
-@media screen and (max-width: 500px){
-  .imageContainer {
-    width: 130px;
-    height: 90px;
-  }
-  .spinner {
-    width: 90px;
-    height: 90px;
-  }
-}
-/* Player buttons media queries--------------------------- */
-@media screen and (max-width: 650px){
-
-  .bestOutOfButtons, .startAndResetButtons {
-    display: flex;
-    width: 70%;
-  }
-  .bestOutOfButtons button, .startAndResetButtons button {
-    min-width: 35%;
-  }
-}
-@media screen and (max-width: 500px){
-
-  .bestOutOfButtons, .startAndResetButtons {
-    display: flex;
+  .messagePara {margin-top: .5rem; }
+  .sideContainer {
     width: 80%;
   }
-  .bestOutOfButtons button, .startAndResetButtons button {
-    min-width: 45%;
+  .divider {
+    height: .25rem;
+    width: 90%;
+    margin: .25rem auto;
   }
 }
+@media screen and (max-width: 380px){
+  body { width: 95%; }
+  h1 { font-size: 2.75rem; }
+  h2, h3, p, button { font-size: 2rem; }
+  button, .sideContainer h3, .messagePara { 
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+  li { font-size: 1.6rem; }
+  .header button { width: 45%; }
+  .imageContainer {
+    width: 23.4375rem;
+    height: 15.625rem;
+  }
+  .divider {
+    margin: .5rem auto;
+  }
+}
+
