@@ -52,7 +52,6 @@ const gameOutcome = () => {
   } else if ((numberOfGames === "5") && (computersScore === "3")){
     computerWinsHelper()
   }
-  console.log(`Player's Score: ${playersScore}`,`Computer's Score: ${computersScore}` )
 }
 // Winning functions. ------------------------------------------
 const playerWinsHelper = () => {
@@ -158,9 +157,6 @@ const gameLogic = () => {
     setHideStartButton(false);
     setPlayerImage("imageContainer images player_thumbsUp");
     setComputerImage("imageContainer images computer_thumbsUp");
-
-    // To be removed!
-    console.clear();
   };
 
   return (

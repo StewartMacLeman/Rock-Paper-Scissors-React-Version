@@ -92,10 +92,10 @@ h1, h2, h3, p, button, li {
   border-bottom: .15rem solid black;
 }
 .scoresItem {
+  min-width: 5.82rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 5.82rem;
 }
 .scoresImageDiv {
   width: 3.125rem;
@@ -106,20 +106,20 @@ h1, h2, h3, p, button, li {
   width: 90%;
 }
 .gameArea {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 .sideContainer {
+  width: 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 48%;
 }
 .divider {
-  height: 12.5rem;
   width: .25rem;
+  height: 12.5rem;
   background-color: black;
 }
 .sideContainer h3 {
@@ -169,12 +169,10 @@ h1, h2, h3, p, button, li {
 .bestOutOfButtons button, .startAndResetButtons button {
   min-width: 45%;
 }
-
 /* The hide class -------------------------------------*/
 .hide {
   display: none;
 }
-
 /* Hand images.--------------------------------------- */
 .images {
   background-size: contain;
@@ -214,10 +212,8 @@ h1, h2, h3, p, button, li {
     padding-bottom: .5rem;
     margin-bottom: .5rem;
   }
-  .messagePara {margin-top: .5rem; }
-  .sideContainer {
-    width: 80%;
-  }
+  .messagePara { margin-top: .5rem; }
+  .sideContainer { width: 80%; }
   .divider {
     height: .25rem;
     width: 90%;
